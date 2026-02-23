@@ -21,15 +21,15 @@
          <div class="flex gap-3 ">
             <div class="bg-[#F1F2F4] text-[#323B49] py-2 pl-5 pr-[270px] rounded-md">
                 <p>Total</p>
-                <p>8</p>
+                <p id="total-count">8</p>
             </div>
             <div  class="bg-[#F1F2F4] text-[#323B49] py-2 pl-5 pr-[270px] rounded-md">
                 <p>Interview</p>
-                <p class="text-[#10B981]">0</p>
+                <p id="interview-count" class="text-[#10B981]">0</p>
             </div>
             <div  class="bg-[#F1F2F4] text-[#323B49] py-2 pl-5 pr-[270px] rounded-md">
                 <p>Rejected</p>
-                <p class="text-[#EF4444]">0</p>
+                <p id="rejected-count" class="text-[#EF4444]">0</p>
             </div>
          </div>
          
@@ -38,16 +38,16 @@
             <div>
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-[#002C5C] text-3xl font-bold">Available Jobs</h3>
-                <p class="text-[#64748B]"><span>8</span> jobs</p>
+                <p class="text-[#64748B]"><span id="showing-count">8</span> jobs</p>
             </div>
             <div class="tab-section flex gap-4">
-                <button class="all-jobs py-3 px-10 bg-[#3B82F6] text-white rounded-lg shadow cursor-pointer">All</button>
-                <button class="interview-jobs py-3 px-10 rounded-lg bg-white text-[#64748B] shadow cursor-pointer">Interview</button>
-                <button class="rejected-jobs py-3 px-10 rounded-lg bg-white text-[#64748B] shadow cursor-pointer">Rejected</button>
+                <button id="all-btn" class="btn all-jobs py-3 px-10 bg-[#3B82F6] text-white rounded-lg shadow cursor-pointer">All</button>
+                <button id="interview-btn" class="btn interview-jobs py-3 px-10 rounded-lg bg-white text-[#64748B] shadow cursor-pointer">Interview</button>
+                <button id="rejected-btn" class="btn rejected-jobs py-3 px-10 rounded-lg bg-white text-[#64748B] shadow cursor-pointer">Rejected</button>
             </div>
         </div>
         <section>
-            <div class="all-cards space-y-4">
+            <div id="all-cards" class="all-cards space-y-4">
                 <div class="card-one bg-white border-1 border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>Mobile First Corp</h2>
@@ -185,7 +185,8 @@
                     </div>
                 </div>
             </div>
-            <div class="no-jobs bg-white flex flex-col justify-center items-center p-6 my-6">
+            <div id="filtered-section" class="hidden space-y-4"></div>
+            <div id="no-jobs" class="no-jobs bg-white flex-col justify-center items-center p-6 my-6 hidden">
                 <div class="w-[200px]">
                     <img src="no-jobs.png" alt="">
                 </div>
@@ -196,5 +197,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
