@@ -20,7 +20,7 @@
          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div class="bg-[#F1F2F4] text-[#323B49] p-5 rounded-md">
                 <p>Total</p>
-                <p id="total-count" class="text-xl font-bold">8</p>
+                <p id="total-count" class="text-xl font-bold">0</p>
             </div>
             <div  class="bg-[#F1F2F4] text-[#323B49] p-5 rounded-md">
                 <p>Interview</p>
@@ -40,14 +40,14 @@
                 <p class="text-[#64748B]"><span id="showing-count">8</span> jobs</p>
             </div>
             <div class="tab-section flex flex-wrap gap-2 sm:gap-4">
-                <button id="all-btn" class="btn all-jobs py-2 sm:py-3 px-6 sm:px-10 bg-[#3B82F6] text-white rounded-lg shadow cursor-pointer text-sm sm:text-base">All</button>
+                <button onclick="" id="all-btn" class="btn all-jobs py-2 sm:py-3 px-6 sm:px-10 bg-[#3B82F6] text-white rounded-lg shadow cursor-pointer text-sm sm:text-base">All</button>
                 <button id="interview-btn" class="btn interview-jobs py-2 sm:py-3 px-6 sm:px-10 rounded-lg bg-white text-[#64748B] shadow cursor-pointer text-sm sm:text-base">Interview</button>
                 <button id="rejected-btn" class="btn rejected-jobs py-2 sm:py-3 px-6 sm:px-10 rounded-lg bg-white text-[#64748B] shadow cursor-pointer text-sm sm:text-base">Rejected</button>
             </div>
         </div>
         <section>
-            <div id="all-cards" class="all-cards space-y-4">
-                <div class="bg-white border-1 border-gray-100 p-6 flex flex-col md:flex-row justify-between gap-4 md:gap-0">
+            <div id="all-cards" class="hidden all-cards space-y-4">
+                <div class="card-one bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>Mobile First Corp</h2>
                         <p class="text-[#64748B]">React Native Developer</p>
@@ -57,14 +57,13 @@
                         <div class="flex gap-3">
                             <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
                             <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
-                        </div>
+                        </div>  
                     </div>
                     <div>
                         <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
-                </div>
-
-                <div class="card-two bg-white border-1 border-gray-100 p-6 flex justify-between">
+                </div> 
+                <div class="card-two bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>WebFlow Agency</h2>
                         <p class="text-[#64748B]">Web Designer & Developer</p>
@@ -81,7 +80,7 @@
                     </div>
                 </div> 
 
-                <div class="card-three bg-white border-1 border-gray-100 p-6 flex justify-between">
+                <div class="card-three bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>DataViz Solutions</h2>
                         <p class="text-[#64748B]">Data Visualization Specialist</p>
@@ -98,7 +97,7 @@
                     </div>
                 </div>
 
-                <div class="card-four bg-white border-1 border-gray-100 p-6 flex justify-between">
+                <div class="card-four bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>CloudFirst Inc</h2>
                         <p class="text-[#64748B]">Backend Developerr</p>
@@ -115,7 +114,7 @@
                     </div>
                 </div>
 
-                <div class="card-five bg-white border-1 border-gray-100 p-6 flex justify-between">
+                <div class="card-five bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>Innovation Labs</h2>
                         <p class="text-[#64748B]">UI/UX Engineer</p>
@@ -133,7 +132,7 @@
                     
                 </div>
 
-                <div class="card-six bg-white border-1 border-gray-100 p-6 flex justify-between">
+                <div class="card-six bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>MegaCorp Solutions</h2>
                         <p class="text-[#64748B]">JavaScript Developer</p>
@@ -150,7 +149,7 @@
                     </div>
                 </div>
 
-                <div class="card-seven bg-white border-1 border-gray-100 p-6 flex justify-between">
+                <div class="card-seven bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>StartupXYZ</h2>
                         <p  class="text-[#64748B]">Full Stack Engineer</p>
@@ -167,7 +166,7 @@
                     </div>  
                 </div>
 
-                <div class="card-eight bg-white border-1 border-gray-100 p-6 flex justify-between">
+                <div class="card-eight bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>TechCorp Industries</h2>
                         <p class="text-[#64748B]">Senior Data Scientist</p>
@@ -184,8 +183,11 @@
                     </div>
                 </div>
             </div>
-            <div id="filtered-section" class="hidden space-y-4"></div>
-            <div id="no-jobs" class="no-jobs bg-white flex-col justify-center items-center p-6 my-6 hidden">
+            <div class="hidden" id="interview-cards">
+                Interview
+            </div>
+            <div class="hidden" id="rejected-cards">Rejected</div>
+            <div id="no-jobs" class="no-jobs  bg-white flex-col justify-center items-center p-6 my-6 hidden">
                 <div class="w-[200px]">
                     <img src="no-jobs.png" alt="">
                 </div>
