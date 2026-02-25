@@ -37,7 +37,7 @@
             <div>
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-[#002C5C] text-3xl font-bold">Available Jobs</h3>
-                <p class="text-[#64748B]"><span id="showing-count">8</span> jobs</p>
+                <p class="text-[#64748B]"><span id="showing-count">0</span> jobs</p>
             </div>
             <div class="tab-section flex flex-wrap gap-2 sm:gap-4">
                 <button onclick="" id="all-btn" class="btn all-jobs py-2 sm:py-3 px-6 sm:px-10 bg-[#3B82F6] text-white rounded-lg shadow cursor-pointer text-sm sm:text-base">All</button>
@@ -46,58 +46,59 @@
             </div>
         </div>
         <section>
-            <div id="all-cards" class="hidden all-cards space-y-4">
-                <div class="card-one bg-white border border-gray-100 p-6 flex justify-between">
-                    <div class="part-one space-y-3">
-                        <h2>Mobile First Corp</h2>
-                        <p class="text-[#64748B]">React Native Developer</p>
-                        <p class="text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
-                        <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                        <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
-                        </div>  
-                    </div>
+            <div id="jobs-container">
+                <div id="all-cards" class="hidden all-cards space-y-4">
+                    <div class="card card-one bg-white border border-gray-100 p-6 flex justify-between">
+                        <div class="part-one space-y-3">
+                            <h2>Mobile First Corp</h2>
+                            <p class="text-[#64748B]">React Native Developer</p>
+                            <p class="text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                            <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
+                            <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                            <div class="flex gap-3">
+                                <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                                <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            </div>  
+                        </div>
+                        <div>
+                            <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                        </div>
+                    </div> 
+                    <div class="card card-two bg-white border border-gray-100 p-6 flex justify-between">
+                        <div class="part-one space-y-3">
+                            <h2>WebFlow Agency</h2>
+                            <p class="text-[#64748B]">Web Designer & Developer</p>
+                            <p class="text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                            <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
+                            <p>Design user-centered interfaces for web and mobile applications. Create wireframes, prototypes, and high-fidelity mockups.</p>
+                            <div class="flex gap-3">
+                                <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                                <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            </div>  
+                        </div>
+                        <div>
+                            <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can  pointer-events-none"></i></button>
+                        </div>
+                    </div> 
+                    
+                    <div class="card card-three bg-white border border-gray-100 p-6 flex justify-between">
+                        <div class="part-one space-y-3">
+                            <h2>DataViz Solutions</h2>
+                            <p class="text-[#64748B]">Data Visualization Specialist</p>
+                            <p class="text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
+                            <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
+                            <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                            <div class="flex gap-3">
+                                <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                                <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            </div>  
+                        </div>
                     <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </div> 
-                <div class="card-two bg-white border border-gray-100 p-6 flex justify-between">
-                    <div class="part-one space-y-3">
-                        <h2>WebFlow Agency</h2>
-                        <p class="text-[#64748B]">Web Designer & Developer</p>
-                        <p class="text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
-                        <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
-                        <p>Design user-centered interfaces for web and mobile applications. Create wireframes, prototypes, and high-fidelity mockups.</p>
-                        <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
-                        </div>  
-                    </div>
-                    <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </div> 
-
-                <div class="card-three bg-white border border-gray-100 p-6 flex justify-between">
-                    <div class="part-one space-y-3">
-                        <h2>DataViz Solutions</h2>
-                        <p class="text-[#64748B]">Data Visualization Specialist</p>
-                        <p class="text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
-                        <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
-                        <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
-                        <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
-                        </div>  
-                    </div>
-                    <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+                            <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
-
-                <div class="card-four bg-white border border-gray-100 p-6 flex justify-between">
+                
+                <div class="card card-four bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>CloudFirst Inc</h2>
                         <p class="text-[#64748B]">Backend Developerr</p>
@@ -105,16 +106,16 @@
                         <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
                         <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                         <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                            <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
                         </div> 
                     </div>
                     <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
-
-                <div class="card-five bg-white border border-gray-100 p-6 flex justify-between">
+                
+                <div class="card card-five bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>Innovation Labs</h2>
                         <p class="text-[#64748B]">UI/UX Engineer</p>
@@ -122,17 +123,17 @@
                         <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
                         <p>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                         <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                            <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
                         </div> 
                     </div>
                     <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                     
                 </div>
-
-                <div class="card-six bg-white border border-gray-100 p-6 flex justify-between">
+                
+                <div class="card card-six bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>MegaCorp Solutions</h2>
                         <p class="text-[#64748B]">JavaScript Developer</p>
@@ -140,16 +141,16 @@
                         <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
                         <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                         <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                            <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
                         </div> 
                     </div>
                     <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
-
-                <div class="card-seven bg-white border border-gray-100 p-6 flex justify-between">
+                
+                <div class="card card-seven bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>StartupXYZ</h2>
                         <p  class="text-[#64748B]">Full Stack Engineer</p>
@@ -157,16 +158,16 @@
                         <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
                         <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                         <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                            <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
                         </div>
                     </div>
                     <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>  
                 </div>
-
-                <div class="card-eight bg-white border border-gray-100 p-6 flex justify-between">
+                
+                <div class="card card-eight bg-white border border-gray-100 p-6 flex justify-between">
                     <div class="part-one space-y-3">
                         <h2>TechCorp Industries</h2>
                         <p class="text-[#64748B]">Senior Data Scientist</p>
@@ -174,20 +175,19 @@
                         <button class="status py-2 px-5 rounded-lg bg-[white] text-[#3B82F6] shadow cursor-pointer">Not Applied</button>
                         <p>We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                         <div class="flex gap-3">
-                            <button class="interview-action py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
-                            <button class="rejected-action py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
+                            <button class="interview-btn py-2 px-5 rounded-lg bg-[#10B981] text-white shadow cursor-pointer">Interview</button>
+                            <button class="rejected-btn py-2 px-5 rounded-lg bg-[#EF4444] text-white shadow cursor-pointer">Rejected</button>
                         </div>
                     </div>
                     <div>
-                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+                        <button class="delete-btn border border-gray-200 rounded-full p-2 text-[#64748B] cursor-pointer"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                     </div>
                 </div>
             </div>
-            <div class="hidden" id="interview-cards">
-                Interview
-            </div>
-            <div class="hidden" id="rejected-cards">Rejected</div>
-            <div id="no-jobs" class="no-jobs  bg-white flex-col justify-center items-center p-6 my-6 hidden">
+            <div class="hidden" id="interview-cards"></div>
+            <div class="hidden" id="rejected-cards"></div>
+        </div>
+            <div id="no-jobs" class="no-jobs bg-white flex-col justify-center items-center p-6 my-6 hidden">
                 <div class="w-[200px]">
                     <img src="no-jobs.png" alt="">
                 </div>
